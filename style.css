@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    width: 500px;
+    height:457px;
+    background-image: url(https://media-public.canva.com/Nl9-0/MAE_lANl9-0/1/s.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.main::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.18);
+}
+
+.mirror{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.person{
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    background-image: url(https://media-public.canva.com/Nl9-0/MAE_lANl9-0/1/s.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    border: 2px solid #fff;
+    position: relative;
+}
+
+.line{
+    width: 50%;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+}
+.first{
+    transform: rotate(30deg);
+    position: absolute;
+    bottom: 6%;
+    left: 86.4%;
+}
+.second{
+    position: absolute;
+    bottom: -26%;
+    left: 25%;
+    transform: rotate(90deg);
+}
+.third{
+    position: absolute;
+    bottom: 6%;
+    right: 86.4%;
+    transform: rotate(-30deg);
+}
+
+.comment{
+    width: 100px;
+    height: 50px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    font-family: Arial;
+}
+.first::before, .second::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: -90%;
+    left: 99%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.third::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: -90%;
+    left: -5%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.first > .comment{
+    transform: rotate(-30deg);
+    position: absolute;
+    top: 100%;
+    left: 60%;
+}
+
+.second > .comment{
+    transform: rotate(-90deg);
+    position: absolute;
+    top: -30px;
+    left: 80%; 
+}
+.third > .comment{
+    transform: rotate(30deg);
+    position: absolute;
+    bottom: -45px;
+    left: -80%;
+}
